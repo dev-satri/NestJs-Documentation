@@ -7,11 +7,9 @@ This guide will walk you through setting up a NestJS project from scratch.
 ## Prerequisites
 Before setting up a NestJS project, ensure you have the following installed:
 
-Node.js (LTS version recommended)
-
-npm or yarn
-
-Nest CLI
+- Node.js (LTS version recommended)
+- `npm` or `yarn`
+- Nest CLI
 
 To verify installations, run:
 ```
