@@ -69,3 +69,4 @@ project-name/
 `app.controller.ts` handles incoming requests.</br>
 `app.service.ts` contains business logic.</br>
 ### [:fast_forward: Comparison: Node.js vs Express.js vs Nest.js](https://github.com/dev-satri/NestJs-Documentation/blob/main/Node-Express-Nest.md)
+### [:fast_forward: Nest CRUD Project](https://github.com/dev-satri/NestJs-Documentation/blob/main/Nest-CRUD.md)
