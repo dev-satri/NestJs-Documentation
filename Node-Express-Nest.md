@@ -36,6 +36,15 @@
 ## Using Pure Node.js
 Using Pure Node.Js
 Steps to Create a Basic Express.js Project:
+<br>
+
+<details>
+
+<summary>Click to expand</summary>
+
+<br>
+
+
 **1. Initialize the Project:**
 - Create a new directory and initialize a Node.js project:
 ```
@@ -59,8 +68,20 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => console.log('Server running on port 3000'));
 ```
 
+
+<br>
+</details>
+
 ## Using Express.js
 Steps to Create a Basic Express.js Project:
+<br>
+<details>
+
+<summary>Click to expand</summary>
+
+<br>
+
+
 **1. Initialize the Project:**
 - Create a new directory and initialize a Node.js project:
 ```
@@ -85,8 +106,18 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => console.log('Server running on port 3000'));
 ```
+</details>
+
 ## Using Nest.js
 Steps to Create a Basic Nest.js Project:
+<br>
+
+<details>
+
+<summary>Click to expand</summary>
+
+<br>
+
 **1. Install Nest CLI:**
 - Install the Nest CLI globally:
 ```
@@ -161,6 +192,9 @@ export class AppService {
   }
 }
 ```
+ 
+</details>
+
 ## 4. When to Use What?
 
 - `Use Node.js` if you need a low-level backend with custom configurations.
