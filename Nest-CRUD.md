@@ -126,6 +126,30 @@ export class ItemsController {
   }
 }
 ```
+
+<details> 
+
+<summary>Parts of API</summary>
+
+
+### ✅ Parts of an API Request in NestJS
+
+| Decorator           | Extracts From         | Use Case                                                                 | Example Usage                                             |
+|---------------------|------------------------|--------------------------------------------------------------------------|------------------------------------------------------------|
+| `@Body()`           | Request Body           | Used to get POST/PUT/PATCH data sent in JSON or form.                   | `createUser(@Body() data: CreateUserDto)`                 |
+| `@Param()`          | URL Parameters         | Used to get dynamic route params like `/user/:id`.                      | `getUser(@Param('id') id: string)`                        |
+| `@Query()`          | Query Parameters       | Used to get data from query string like `/search?term=abc`.             | `search(@Query('term') term: string)`                     |
+| `@Headers()`        | Request Headers        | Used to access custom or standard headers in a request.                 | `getData(@Headers('authorization') token: string)`        |
+| `@Req()`            | Full Request Object    | Gives access to the entire request object (like in Express).            | `handle(@Req() req: Request)`                             |
+| `@Res()`            | Full Response Object   | Gives access to the full response object; used for manual response.     | `handle(@Res() res: Response)`                            |
+| `@Ip()`             | Client IP Address      | Used to get the IP address of the incoming request.                     | `getIp(@Ip() ip: string)`                                 |
+| `@HostParam()`      | Host Parameter         | Used with wildcard hosts to extract dynamic values from host.           | `handle(@HostParam('account') account: string)`           |
+| `@Session()`        | Session Data (if used) | Gets the current session if sessions are configured.                    | `getSession(@Session() session: Record<string, any>)`     |
+| `@UploadedFile()`   | Uploaded File (Single) | Used with `@UseInterceptors(FileInterceptor())` for file upload.        | `upload(@UploadedFile() file: Express.Multer.File)`       |
+| `@UploadedFiles()`  | Uploaded Files (Multiple) | Used with `FilesInterceptor()` for multiple files.                    | `upload(@UploadedFiles() files: Express.Multer.File[])`   |
+
+</details>
+
 ## Create Module:
 `src/items/items.module.ts`
 ```ts
