@@ -16,13 +16,9 @@ nest-mongo-crud/
 ├── package.json
 
 ```
-## Database (MongoDB)
-**Community Edition:** [Link](https://www.mongodb.com/try/download/community-edition)
-
 ## 🧱 Tech Stack
 - NestJS
-- MongoDB (accessed using MongoDB Compass)
-
+- MongoDB (accessed using [MongoDB Compass](https://www.mongodb.com/try/download/community-edition))
 ## 📦 Setup NestJS Project
 ```
 npm i -g @nestjs/cli
