@@ -52,7 +52,7 @@ PORT=3000
 ```
 ## 🧠 Setup MongoDB Connection
 Edit `app.module.ts:`
-```
+```ts
 /* eslint-disable prettier/prettier */
 // src/app.module.ts
 
@@ -81,7 +81,7 @@ export class AppModule { }
 > Replace the MongoDB URI if you're using MongoDB Atlas or another custom database.
 
 Edit `main.ts:`
-```
+```ts
 /* eslint-disable prettier/prettier */
 // src/main.ts
 
@@ -101,7 +101,7 @@ bootstrap();
 ```
 ## 📄 Create Schema (Book)
 Create file: `src/books/schemas/book.schema.ts`
-```
+```ts
 /* eslint-disable prettier/prettier */
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
@@ -124,7 +124,7 @@ export const BookSchema = SchemaFactory.createForClass(Book);
 ```
 ## 🔌 Register the Schema in BooksModule
 Update `books.module.ts`:
-```
+```ts
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BooksService } from './books.service';
@@ -141,7 +141,7 @@ import { Book, BookSchema } from './schemas/book.schema';
 export class BooksModule {}
 ```
 ## ⚙️ CRUD in Service
-```
+```ts
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
@@ -176,7 +176,7 @@ export class BooksService {
 ```
 ## 🌐 API Routes in Controller
 Update `books.controller.ts`:
-```
+```ts
 /* eslint-disable prettier/prettier */
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { BooksService } from './books.service';
