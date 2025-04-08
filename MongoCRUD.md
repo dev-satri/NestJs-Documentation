@@ -16,6 +16,8 @@ nest-mongo-crud/
 ├── package.json
 
 ```
+## Database (MongoDB)
+[Community Edition](https://www.mongodb.com/try/download/community-edition)
 
 ## 🧱 Tech Stack
 - NestJS
