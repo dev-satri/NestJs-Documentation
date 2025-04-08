@@ -17,7 +17,7 @@ nest-mongo-crud/
 
 ```
 ## Database (MongoDB)
-[Community Edition](https://www.mongodb.com/try/download/community-edition)
+**Community Edition:** [Link](https://www.mongodb.com/try/download/community-edition)
 
 ## 🧱 Tech Stack
 - NestJS
