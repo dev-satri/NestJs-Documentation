@@ -115,11 +115,11 @@ export class CreateUserDto {
 }
 ```
 ## 🚨 Best Practices
-✅ Use DTOs in Controllers, not Services.
-✅ Always validate incoming data.
-✅ Use @Type() for nested objects to ensure proper transformation.
-✅ Avoid using interfaces for DTOs when you need decorators.
-✅ Leverage utility types to keep your DTOs DRY (Don't Repeat Yourself).
+✅ Use DTOs in Controllers, not Services. <br>
+✅ Always validate incoming data.<br>
+✅ Use @Type() for nested objects to ensure proper transformation.<br>
+✅ Avoid using interfaces for DTOs when you need decorators.<br>
+✅ Leverage utility types to keep your DTOs DRY (Don't Repeat Yourself).<br>
 ## 📁 Folder Structure Recommendation
 ```
 src/
