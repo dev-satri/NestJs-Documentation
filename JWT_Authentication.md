@@ -20,13 +20,14 @@ A typical JWT contains:
 - Built-in support via `@nestjs/jwt` and `@nestjs/passport`
 
 ## Pre-requisits
-## Dependency Injection
-Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC) between classes and their dependencies. It allows you to inject dependencies (e.g., services, configurations, or other classes) into a class rather than having the class instantiate them directly.
+**Dependency Injection**
+<br>
+> Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC) between classes and their dependencies. It allows you to inject dependencies (e.g., services, configurations, or other classes) into a class rather than having the class instantiate them directly.
 
 <details>
 <summary> View Example </summary>
 
-```
+```ts
 class Logger {
   log(message: string) {
     console.log(`[LOG]: ${message}`);
@@ -44,6 +45,43 @@ class UserService {
 const logger = new Logger();
 const userService = new UserService(logger);
 userService.createUser("Alice");
+```
+</details>
+
+**Super Constructor**
+
+<details>
+<summary> View Example </summary>
+
+```ts
+class Cook {
+  constructor(public tool: string) {
+    console.log(`Cook is ready with ${tool}`);
+  }
+
+  prepare() {
+    console.log("Cook is preparing something...");
+  }
+}
+
+class Chef extends Cook {
+  constructor(tool: string) {
+    super(tool); // Parent constructor
+  }
+
+  prepare() {
+    super.prepare(); // Call base method
+    console.log("Chef is preparing a gourmet meal!");
+  }
+}
+
+const chef = new Chef("knife");
+chef.prepare();
+
+// Output:
+// Cook is ready with knife
+// Cook is preparing something...
+// Chef is preparing a gourmet meal!
 ```
 </details>
 
