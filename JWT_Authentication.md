@@ -18,7 +18,7 @@ A typical JWT contains:
 - Stateless and scalable
 - Easy to integrate with Passport (authentication middleware)
 - Built-in support via `@nestjs/jwt` and `@nestjs/passport`
-
+---
 ## Pre-requisits
 **Dependency Injection**
 <br>
@@ -85,6 +85,14 @@ chef.prepare();
 ```
 </details>
 
+### 📄Accessing .env Variables Using process in NestJS
+🧠 What is process?
+In Node.js, process is a global object that provides information and control over the current Node.js process. It includes a special object called:
+```
+console.log(process.env.PORT);
+console.log(process.env.JWT_SECRET);
+```
+---
 ## 🧱 Project Setup
 ```ts
 npm i -g @nestjs/cli
