@@ -19,6 +19,34 @@ A typical JWT contains:
 - Easy to integrate with Passport (authentication middleware)
 - Built-in support via `@nestjs/jwt` and `@nestjs/passport`
 
+## Pre-requisits
+## Dependency Injection
+Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC) between classes and their dependencies. It allows you to inject dependencies (e.g., services, configurations, or other classes) into a class rather than having the class instantiate them directly.
+
+<details>
+<summary> View Example </summary>
+
+```
+class Logger {
+  log(message: string) {
+    console.log(`[LOG]: ${message}`);
+  }
+}
+
+class UserService {
+  constructor(private logger: Logger) {}
+
+  createUser(name: string) {
+    this.logger.log(`User ${name} created`);
+  }
+}
+
+const logger = new Logger();
+const userService = new UserService(logger);
+userService.createUser("Alice");
+```
+</details>
+
 ## 🧱 Project Setup
 ```ts
 npm i -g @nestjs/cli
@@ -281,5 +309,3 @@ POST /auth/login
 GET /auth/profile
 Authorization: Bearer <access_token>
 ```
-
-
